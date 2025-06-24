@@ -1,3 +1,38 @@
+ // Toggle mobile menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            
+            // Change hamburger icon to X when menu is open
+            if (navLinks.classList.contains('active')) {
+                menuToggle.innerHTML = '&times;';
+            } else {
+                menuToggle.innerHTML = '&#9776;';
+            }
+        });
+
+        // Close menu when clicking on a link (optional)
+        const links = document.querySelectorAll('.links a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                menuToggle.innerHTML = '&#9776;';
+            });
+        });
+
+        // Close menu when clicking outside (optional)
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navLinks.contains(event.target) || menuToggle.contains(event.target);
+            
+            if (!isClickInsideNav && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                menuToggle.innerHTML = '&#9776;';
+            }
+        });
+ 
+ 
  const heroContent = document.querySelector('.Hero-content');
 
   const observer = new IntersectionObserver(entries => {
