@@ -1,0 +1,312 @@
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 1450px) {
+    .Hero-content img{
+        width: 700px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .Hero-content h1{
+        font-size: 50px;
+    }
+    .paragraph {
+         width: 720px;
+        padding: 18px 20px;
+        gap: 5px;
+    }
+    .paragraph p{
+        font-size: 18px;
+
+    }
+ .Hero-content img{
+        width: 600px;
+        height: 100px;
+    }
+
+    .Hero-btn{
+    margin-top: 90px;
+    margin-bottom: 157px;
+    display: flex;
+    width: 400px;
+    height: 68px;
+}
+form{
+    max-width: 720px;
+}
+}
+
+
+/* Responsive layout */
+@media screen and (max-width: 1050px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    background-color: #000428;
+    position: absolute;
+    top: 80px;
+    right: 5%;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  nav {
+    position: relative;
+  }
+  .Hero-content{
+    justify-content: start;
+    align-items: center;
+  }
+
+   .Hero-content h1{
+        font-size: 60px;
+    }
+    .Hero-content span{
+    color: white;
+}
+
+    .paragraph {
+         width: 720px;
+        padding: 18px 20px;
+        gap: 5px;
+    }
+    .paragraph p{
+        font-size: 18px;
+
+    }
+ .Hero-content img{
+        width: 100%;
+    }
+
+    .Hero-btn{
+    margin-top: 90px;
+    margin-bottom: 157px;
+    display: flex;
+    width: 400px;
+    height: 68px;
+}
+.paragraph2{
+width: 720px;
+}
+.About-content h1{
+    font-size: 120px;
+}
+}
+
+@media screen and (max-width: 950px) {
+ .paragraph {
+        width: 100%;
+        padding:20px;
+        gap: 0px;
+    }
+    .paragraph p{
+        font-size: 18px;
+        text-align: left;
+
+    }
+    .Hero-content h1{
+        font-size: 60px;
+        text-align: left;
+    }
+     .paragraph2{
+    width: 650px;
+    }
+    .paragraph2 p{
+        font-size: 20px;
+    }
+
+.About-content h1{
+    font-size: 120px;
+}
+form{
+    max-width: 520px;
+}
+}
+
+@media screen and (max-width: 740px) {
+    .Hero-btn{
+    margin-top: 90px;
+    margin-bottom: 157px;
+    display: flex;
+    width: 100%;
+    height: 68px;
+    }
+    .Hero-content h1{
+        font-size: 50px;
+    }
+    .Hero-content img{
+        width: 100%;
+    }
+    .paragraph p{
+        font-size: 17px;
+        text-align: left;
+
+    }
+    .paragraph2{
+    width: 550px;
+    }
+    .paragraph2 p{
+        font-size: 18px;
+    }
+    .About-content h1{
+        font-size: 120px;
+    }
+
+    .card-text h2{
+        font-size: 90px;
+    }
+    .card-text p{
+        font-size: 20px;
+    }
+    .card-content img{
+        width: 70px;
+        margin-right: 10px;
+    }
+form{
+    max-width: 450px;
+}
+}
+
+
+@media screen and (max-width: 620px) {
+    .Hero-btn{
+        font-size: 19px;
+    }
+    .Hero-content h1{
+        font-size: 40px;
+    }
+    .Services-content h1{
+        font-size: 40px;
+    }
+    .paragraph2{
+        width: 450px;
+    }
+    .paragraph2 p{
+        font-size: 18px;
+    }
+    .About-content h1{
+        font-size: 90px;
+    }
+    .About-btn{
+        margin-top: 70px;
+    }
+     .card-text h2{
+        font-size: 70px;
+    }
+    .card-text p{
+        font-size: 16px;
+    }
+    .card-content img{
+        width: 60px;
+        margin-right: 10px;
+    }
+.Portfolio-content h1{
+    font-size: 50px;
+}
+
+
+}
+
+
+
+
+@media screen and (max-width: 550px) {
+    .Logo img{
+        width: 180px;
+        height: 30px;
+    }
+    .Hero-content h1{
+        font-size: 32px;
+        margin-bottom: 0;
+    }
+    .service-btn{
+        width: 350px;
+        font-size: 16px;
+     }
+     .paragraph2{
+        width: 340px;
+    }
+    .paragraph2 p{
+        font-size: 16px;
+        text-align: left;
+    }
+    .About-content h1{
+        font-size: 70px;
+    }
+    .About-btn{
+        margin-top: 70px;
+        width: 350px;
+    }
+    
+     .card-text h2{
+        font-size: 60px;
+    }
+    .card-text p{
+        font-size: 14px;
+    }
+    .card-content img{
+        width: 40px;
+        margin-right: 5px;
+    }
+    form{
+    max-width: 320px;
+    padding: 25px;
+
+}
+label{
+    font-size: 16px;
+}
+input{
+    height: 38px;
+}
+textarea{
+    height: 130px;
+}
+.Contact-content h1{
+    font-size: 50px;
+}
+.text h3{
+  
+    font-size: 25px;
+   
+}
+.Services-content h1{
+    font-size: 36px;
+}
+
+.text p{
+  
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.Services{
+    gap: 80px;
+}
+}
+
+
+
+
+
+
+
+
+
+

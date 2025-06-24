@@ -1,0 +1,121 @@
+
+
+
+
+/* .container {
+} */
+.container{
+  width: 100%;
+}
+.card-carousel {
+  --card-width: 80%;
+  --card-max-width: 1000px;
+  --card-height: 570px;
+  --carousel-min-width: 350px;
+  z-index: 1;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: var(--card-height);
+  min-width: var(--carousel-min-width);
+  transition: filter .3s ease;
+}
+
+/* @media screen and (max-width: 640px) {
+  .card-carousel {
+    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .card-carousel {
+    margin-left: calc((100vw - var(--carousel-min-width) - 50px) / 3);
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .card-carousel {
+    margin-left: calc((100vw - var(--carousel-min-width) - 60px) / 1.5);
+  } */
+/* } */
+
+
+
+.card-carousel.smooth-return {
+  transition: all .2s ease;
+}
+
+.card-carousel .card {
+  background: whitesmoke;
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  text-align: center;
+  padding: 1em;
+  min-width: 250px;
+  height: var(--card-height);
+  position: absolute;
+  margin: 0 auto;
+  color: rgba(0,0,0,.5);
+  transition: inherit;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  filter: brightness(.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.highlight {
+  filter: brightness(1)
+}
+
+.card-content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.card-content img{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+}
+
+#A{
+  background-color: red;
+}
+
+#B{
+  background-color: #04B7A2;
+}
+#C{
+  background-color: #051439;
+}
+#D{
+  background-color: #4E12CD;
+}
+#E{
+  background-color: orangered;
+}
+.card-text h2{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 108.646px;
+  font-style: normal;
+  font-weight: 600;
+  line-height:0;
+
+}
+
+.card-text p{
+  color: #FFF;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0;
+}
