@@ -187,28 +187,58 @@
             <div class="Contact-content">
                 <h1>Get In Touch</h1>
                 <div class="Contact-form">
-                    <form action="https://formsubmit.co/info@metmetric.co.za" method="POST">
+
+                    <form id="hubspot-form">
+
                         <div style="display: flex; flex-direction: column;">
-                            <label for="email">Name and Surname</label>
-                            <input type="text">
-                        <div>
-                        <div style="display: flex; flex-direction: column; margin-top: 30px; ">
+
+                            <label for="fullname">Name and Surname</label>
+
+                            <input type="text" name="fullname" required>
+
+                        </div>
+
+ 
+
+                        <div style="display: flex; flex-direction: column; margin-top: 30px;">
+
                             <label for="email">Email</label>
-                            <input type="email">
-                        <div>
+
+                            <input type="email" name="email" required>
+
+                        </div>
+
+ 
+
                         <div style="display: flex; flex-direction: column; margin-top: 30px;">
-                            <label for="email">Mobile</label>
-                            <input type="number">
-                        <div>    
+
+                            <label for="phone">Mobile</label>
+
+                            <input type="tel" name="phone">
+
+                        </div>
+
+ 
+
                         <div style="display: flex; flex-direction: column; margin-top: 30px;">
+
                             <label for="message">Message</label>
-                            <textarea  id="message" rows="8" cols="30"></textarea>
+
+                            <textarea name="message" rows="8" cols="30"></textarea>
+
                         </div>
-                        <div class="center-btn">
-                            <button class="form-button">Send</button>
+
+ 
+
+                        <div class="center-btn" style="margin-top: 20px;">
+
+                        <button type="submit" class="form-button">Send</button>
+
                         </div>
+
                     </form>
-                    </div>
+
+                </div>
             </div>
         </div>
        </section>
@@ -244,6 +274,67 @@
         <style src="CSS/about.css"></style>
         <style src="CSS/portfolio.css"></style>
         <script src="Assets/script.js"></script>
+        <script>
+            document.getElementById('hubspot-form').addEventListener('submit', async function(e) {
+
+    e.preventDefault();
+
+ 
+
+    const data = {
+
+      fields: [
+
+        { name: "fullname", value: e.target.fullname.value },
+
+        { name: "email", value: e.target.email.value },
+
+        { name: "phone", value: e.target.phone.value },
+
+        { name: "message", value: e.target.message.value },
+
+      ]
+
+    };
+
+ 
+
+    const response = await fetch(
+
+      "https://api.hsforms.com/submissions/v3/integration/submit/146421879/f24eed07-f50c-482b-ab43-624780a683ce",
+
+      {
+
+        method: "POST",
+
+        headers: {
+
+          "Content-Type": "application/json"
+
+        },
+
+        body: JSON.stringify(data)
+
+      }
+
+    );
+
+ 
+
+    if (response.ok) {
+
+      alert("Form submitted successfully!");
+
+      e.target.reset();
+
+    } else {
+
+      alert("There was an error submitting the form.");
+
+    }
+
+  });
+        </script>
 
 </body>
 
